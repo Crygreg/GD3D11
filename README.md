@@ -1,4 +1,67 @@
+# G3D11 (Gothic Direct3D 11) Renderer - Atmospheric Edition
+
+***English:***
+First and foremost: I am no expert in C++ programming. DON'T WORRY! The Renderer works absolutely fine. The point is that I'd love to make even more changes and additions to the Renderer, bringing back features from the old Gothic DX7 Renderer but also expanding on features that would allow mods to determine their distinguished atmosphere with the new available sky textures, fog values etc.
+
+Sadly, as of now, this is the best I can do. I'll provide the source files in the hopes that maybe someone takes interest in this forgotten code again and helps realize the Renderer's full potential.
+
+*The goal of this version of the Renderer is different than the others. Here's what's changed:*
+- Update from my last version (hidden) based on SaiyanKing's version with all its features and bugfixes over kirides'
+- A better system to distinguish between various .zens and worldspaces (sadly no system to actually distinguish between mods, even if it's the same worldspace so I had to make a decision for NewWorld and AddonWorld and OldWorld: AddonWorld looks like the usual G2 Renderer experience, NewWorld has more of a G1-styled look but updated and OldWorld has its classic DX7 styled look)
+- More Sky Texture variants from G1, G2 and custom ones to use in the future when modders create their own worldspaces etc. (hopefully there will be a better system in place for this too)
+- a bit better  display of the skydome (a bit brighter but I still need to figure out how to improve it to be closer to DX7's display of the skybox)
+- improved fog colors (no more orange tint in G1, a bit more reddish now etc.)
+
+
+*Future plans:*
+- As mentioned, I want to implement a system that allows to check for MODS, not just .zen file names as of now. Alternatively, even better, a menu that  allows you to determine your preferenced look for the game OR simply displaying whatever sky texture and fog values are determined by the game's / mod's settings and files!
+- More sky variants appearing throughout the day, allowing for a more natural cycle (without withdrawing from the atmospheric artstyle that is meant to be GOTHIC)
+- Features from the old DX7 Renderer (trees reacting to wind, sea waves, displaying atmospheric lights, maybe displaying whatever sky texture & fog values are determined by the game's / mod's settings and files as it was the case in the original Renderer, etc.)
+
+If you are interested in helping out in the cause, let me know or ... well, simply download the source files and go ahead!
+Thank you and have fun playing the game.
+
+*Known Issues:*
+- G1 is supposed to have a more updated skytexture, yet displays the original one still
+
+
+***German / Deutsch:***
+Zuallererst: Ich bin kein Experte in C++-Programmierung. KEINE BANGE! Der Renderer funktioniert absolut einwandfrei. Der Punkt ist, dass ich gerne noch mehr Änderungen und Ergänzungen an dem Renderer vornehmen würde, um die Funktionen des alten Gothic DX7 Renderers zurückzubringen, aber auch um Funktionen zu erweitern, die es Mods erlauben würden, ihre eigene Atmosphäre mit den neuen verfügbaren Himmelstexturen, Nebelwerten usw. zu bestimmen.
+
+Leider ist das im Moment das Beste, was ich tun kann. Ich stelle die Quelldateien in der Hoffnung zur Verfügung, dass sich vielleicht jemand wieder für diesen vergessenen Code interessiert und dabei hilft, das volle Potenzial des Renderers auszuschöpfen.
+
+*Das Ziel dieser Version des Renderers ist anders als die anderen. Hier ist, was sich geändert hat:*
+- Update von meiner letzten Version (versteckt) basierend auf SaiyanKings Version mit all ihren Features und Bugfixes gegenüber kirides' Version
+- Ein besseres System, um zwischen verschiedenen .zens und Welträumen zu unterscheiden (leider gibt es kein System, um zwischen Mods zu unterscheiden, selbst wenn es sich um denselben Weltraum handelt, so dass ich eine Entscheidung für NewWorld und AddonWorld und OldWorld treffen musste: AddonWorld sieht aus wie das übliche G2-Renderer-Erlebnis, NewWorld hat eher ein G1-artiges Aussehen, aber aktualisiert und OldWorld hat sein klassisches DX7-artiges Aussehen)
+- Mehr Himmelstextur-Varianten aus G1, G2 und eigene, die in Zukunft verwendet werden können, wenn Modder ihre eigenen Welträume usw. erstellen (hoffentlich wird es auch dafür ein besseres System geben)
+- eine etwas bessere Darstellung der Himmelskuppel (etwas heller, aber ich muss noch herausfinden, wie ich sie verbessern kann, damit sie näher an die Darstellung der Skybox in DX7 herankommt)
+- verbesserte Nebelfarben (kein Orangestich mehr in G1, jetzt etwas rötlicher usw.)
+
+*Zukünftige Pläne:*
+- Wie bereits erwähnt, möchte ich ein System implementieren, das es erlaubt, nach MODS zu suchen, nicht nur nach .zen-Dateinamen wie bisher. Oder, noch besser, ein Menü, das es einem erlaubt, sein bevorzugtes Aussehen für das Spiel zu bestimmen ODER einfach die Himmelstextur und Nebelwerte anzuzeigen, die durch die Einstellungen und Dateien des Spiels/der Mods bestimmt werden!
+- Mehr Himmelsvarianten, die im Laufe des Tages erscheinen, um einen natürlicheren Zyklus zu ermöglichen (ohne den atmosphärischen Artstyle, der GOTHIC sein soll, zu vernachlässigen)
+- Features aus dem alten DX7 Renderer (Bäume, die auf Wind und Wellen reagieren, atmosphärische Lichter, vielleicht die Anzeige der Himmelstextur- und Nebelwerte, die durch die Einstellungen und Dateien des Spiels/Mods bestimmt werden, wie es im ursprünglichen Renderer der Fall war, usw.)
+
+Wenn ihr Interesse habt, dabei zu helfen, lasst es mich wissen oder ... nun, ladet einfach die Quelldateien herunter und legt los!
+Vielen Dank und viel Spaß mit dem Spiel.
+
+*Bekannte Probleme:*
+- G1 sollte eigentlich eine aktuellere Himmelstextur haben, zeigt aber immer noch die Originaltextur an.
+
+CREDITS:
+- Degenerated: Original creator of DX11
+- Bonne6: Revamped the DX11 into the Clockwork Edition and allowed it to run smoothly and have more customization options
+- Kirides: Again developing DX11 further with his "Yet Another D3D11 Renderer" version
+- SaiyanKing: Another great upgrade and bugfixing with his work
+- Gothic Reloaded & Gothic Modderdatabase: For the new skytextures
+
+
+
+# ORIGINAL DESCRIPTION BY SAIYANKING
+
+
 # GD3D11 (Gothic Direct3D 11) Renderer [![GitHub Actions](https://github.com/kirides/GD3D11/actions/workflows/build.yml/badge.svg)](https://github.com/Kirides/GD3D11/actions) [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Kirides/GD3D11?include_prereleases)](https://github.com/Kirides/GD3D11/releases)
+
 
 This mod for the games **Gothic** and **Gothic II** brings the engine of those games into a more modern state. Through a custom implementation of the DirectDraw-API and using hooking and assembler-code-modifications of Gothic's internal engine calls, this mod completely replaces Gothic's old rendering architecture.
 
