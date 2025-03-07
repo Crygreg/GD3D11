@@ -123,6 +123,12 @@ XRESULT GSky::LoadSkyResources() {
     XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_G1.dds" ) );
 #else
     XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay.dds" ) );
+    XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_G1.dds" ) );
+    XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
+    XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_SEQ.dds" ) );
+    XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_NG1.dds" ) );
+    XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_ANV.dds" ) );
+
 #endif
 
     D3D11Texture* nightTex;
@@ -146,13 +152,53 @@ void GSky::SetSkyTexture( ESkyTexture texture ) {
 
     // Load the specific new texture
     switch ( texture ) {
+        /*    case ESkyTexture::ST_NewWorld:
+                XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay.dds" ) );
+                Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.50f );
+                break;
+        */ // OLD SETTINGS
     case ESkyTexture::ST_NewWorld:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_RebootNewWorld:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_G1.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_AnniversaryNewWorld:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_NG1.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_AnniversaryNewWorldALT:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_ANV.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_SequelWorld:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_SEQ.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_OldWorld:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_G1World:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_NG1.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        break;
+
+    case ESkyTexture::ST_AddonWorld:
         XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay.dds" ) );
         Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.50f );
         break;
 
-    case ESkyTexture::ST_OldWorld:
-        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_G1.dds" ) );
+    case ESkyTexture::ST_DragonIsland:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
         Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
         break;
     }
@@ -167,7 +213,7 @@ void GSky::SetCustomCloudAndNightTexture( int idx, bool isNightTexture, bool isO
             NightTexture.reset( nightTex );
             XLE( NightTexture->Init( "system\\GD3D11\\Textures\\starsh.dds" ) );
         } else {
-            SetSkyTexture( isOldWorld ? ESkyTexture::ST_OldWorld : ESkyTexture::ST_NewWorld );
+            SetSkyTexture( isOldWorld ? ESkyTexture::ST_OldWorld : ESkyTexture::ST_AnniversaryNewWorldALT );
         }
     } else {
         std::string textureFile; 
@@ -205,7 +251,7 @@ void GSky::SetCustomSkyTexture_ZenGin( bool isNightTexture, zCTexture* texture, 
             XLE( NightTexture->Init( "system\\GD3D11\\Textures\\starsh.dds" ) );
             NightTexture_Zen = nullptr;
         } else {
-            SetSkyTexture( isOldWorld ? ESkyTexture::ST_OldWorld : ESkyTexture::ST_NewWorld );
+            SetSkyTexture( isOldWorld ? ESkyTexture::ST_OldWorld : ESkyTexture::ST_AnniversaryNewWorldALT );
             CloudTexture_Zen = nullptr;
         }
     } else {

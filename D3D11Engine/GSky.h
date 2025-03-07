@@ -21,7 +21,14 @@ struct AtmosphereSettings {
 
 enum ESkyTexture {
     ST_NewWorld,
-    ST_OldWorld
+    ST_OldWorld,
+    ST_AddonWorld,
+    ST_RebootNewWorld,
+    ST_G1World,
+    ST_AnniversaryNewWorld,
+    ST_AnniversaryNewWorldALT,
+    ST_SequelWorld,
+    ST_DragonIsland
 };
 
 class zCTexture;
