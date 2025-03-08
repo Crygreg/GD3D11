@@ -5,6 +5,14 @@ First and foremost: I am no expert in C++ programming. DON'T WORRY! The Renderer
 
 Sadly, as of now, this is the best I can do. I'll provide the source files in the hopes that maybe someone takes interest in this forgotten code again and helps realize the Renderer's full potential.
 
+NEXUS:
+https://www.nexusmods.com/gothic2/mods/118
+
+Pictures:
+https://imgur.com/a/fcYwnse
+
+INSTALLATION: Download the release package (on Nexus or under “Releases” in Github), select your game version and unzip the files in the game folder under “system”. It is best to delete previous configurations as well.
+
 *The goal of this version of the Renderer is different than the others. Here's what's changed:*
 - Update from my last version (hidden) based on SaiyanKing's version with all its features and bugfixes over kirides'
 - A better system to distinguish between various .zens and worldspaces (sadly no system to actually distinguish between mods, even if it's the same worldspace so I had to make a decision for NewWorld and AddonWorld and OldWorld: AddonWorld looks like the usual G2 Renderer experience, NewWorld has more of a G1-styled look but updated and OldWorld has its classic DX7 styled look)
@@ -29,6 +37,14 @@ Thank you and have fun playing the game.
 Zuallererst: Ich bin kein Experte in C++-Programmierung. KEINE BANGE! Der Renderer funktioniert absolut einwandfrei. Der Punkt ist, dass ich gerne noch mehr Änderungen und Ergänzungen an dem Renderer vornehmen würde, um die Funktionen des alten Gothic DX7 Renderers zurückzubringen, aber auch um Funktionen zu erweitern, die es Mods erlauben würden, ihre eigene Atmosphäre mit den neuen verfügbaren Himmelstexturen, Nebelwerten usw. zu bestimmen.
 
 Leider ist das im Moment das Beste, was ich tun kann. Ich stelle die Quelldateien in der Hoffnung zur Verfügung, dass sich vielleicht jemand wieder für diesen vergessenen Code interessiert und dabei hilft, das volle Potenzial des Renderers auszuschöpfen.
+
+NEXUS:
+https://www.nexusmods.com/gothic2/mods/118
+
+Bilder:
+https://imgur.com/a/fcYwnse
+
+INSTALLATION: Release Paket (auf Nexus oder unter "Releases" im Github) herunterladen und eure Spielversion wählen und die Dateien im Spielordner unter "system" entpacken. Am besten vorherige Konfigurationen auch löschen.
 
 *Das Ziel dieser Version des Renderers ist anders als die anderen. Hier ist, was sich geändert hat:*
 - Update von meiner letzten Version (versteckt) basierend auf SaiyanKings Version mit all ihren Features und Bugfixes gegenüber kirides' Version
