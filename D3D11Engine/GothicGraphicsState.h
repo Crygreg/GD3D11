@@ -531,7 +531,7 @@ struct GothicRendererSettings {
         DrawFog = true;
         FogRange = 0;
         EnableHDR = false;
-        HDRToneMap = E_HDRToneMap::ToneMap_Simple;
+        HDRToneMap = E_HDRToneMap::Uncharted2Tonemap;
         ReplaceSunDirection = false;
         AtmosphericScattering = true; // Use original sky
         ShowSkeletalVertexNormals = false;
@@ -685,16 +685,16 @@ struct GothicRendererSettings {
     }
 
     void SetupOldWorldSpecificValues() {
-        FogGlobalDensity = 0.00002f;
+        FogGlobalDensity = 0.00005f;
         FogHeightFalloff = 0.00018f;
-        FogColorMod = float3::FromColor( 128, 128, 128 );
+        FogColorMod = float3::FromColor( 100, 100, 107 );
         FogHeight = 4000;
     }
 
     void SetupG1WorldSpecificValues() {
         FogGlobalDensity = 0.00002f;
         FogHeightFalloff = 0.00018f;
-        FogColorMod = float3::FromColor( 235, 180, 157 );
+        FogColorMod = float3::FromColor( 247, 180, 157 );
         FogHeight = 4000;
     }
 
@@ -708,30 +708,51 @@ struct GothicRendererSettings {
 
     void SetupNewWorldSpecificValues() {
         FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0005f;
-        FogColorMod = float3::FromColor( 189, 146, 107 );
-        FogHeight = 800;
+        FogHeightFalloff = 0.0057f;
+        FogColorMod = float3::FromColor( 157, 180, 247 );
+        FogHeight = 450;
     }
 
     void SetupAnniversaryNewWorldSpecificValues() {
         FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0005f;
-        FogColorMod = float3::FromColor( 235, 180, 157 );
-        FogHeight = 800;
+        FogHeightFalloff = 0.0057f;
+        FogColorMod = float3::FromColor( 247, 180, 157 );
+        FogHeight = 400;
     }
 
     void SetupRebootNewWorldSpecificValues() {
         FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0005f;
-        FogColorMod = float3::FromColor( 235, 180, 157 );
-        FogHeight = 800;
+        FogHeightFalloff = 0.0057f;
+        FogColorMod = float3::FromColor( 247, 180, 157 );
+        FogHeight = 400;
     }
 
     void SetupAddonWorldSpecificValues() {
-        FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0005f;
+        FogGlobalDensity = 0.00003f;
+        FogHeightFalloff = 0.0045f;
         FogColorMod = float3::FromColor( 255, 255, 255 );
-        FogHeight = 0;
+        FogHeight = 700;
+    }
+
+    void SetupArcholosSpecificValues() {
+        FogGlobalDensity = 0.00003f;
+        FogHeightFalloff = 0.0045f;
+        FogColorMod = float3::FromColor( 255, 255, 255 );
+        FogHeight = 700;
+    }
+
+    void SetupEskalonSpecificValues() {
+        FogGlobalDensity = 0.00003f;
+        FogHeightFalloff = 0.0045f;
+        FogColorMod = float3::FromColor( 255, 180, 157 );
+        FogHeight = 750;
+    }
+
+    void SetupNorthmarSpecificValues() {
+        FogGlobalDensity = 0.00007f;
+        FogHeightFalloff = 0.0057f;
+        FogColorMod = float3::FromColor( 200, 200, 207 );
+        FogHeight = 5000;
     }
 
     void DisableEverything() {}

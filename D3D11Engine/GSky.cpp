@@ -159,7 +159,7 @@ void GSky::SetSkyTexture( ESkyTexture texture ) {
         */ // OLD SETTINGS
     case ESkyTexture::ST_NewWorld:
         XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay.dds" ) );
-        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.50f );
         break;
 
     case ESkyTexture::ST_RebootNewWorld:
@@ -199,7 +199,7 @@ void GSky::SetSkyTexture( ESkyTexture texture ) {
 
     case ESkyTexture::ST_DragonIsland:
         XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
-        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.50f );
         break;
     }
 }

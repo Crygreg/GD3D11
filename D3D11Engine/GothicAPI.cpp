@@ -739,41 +739,94 @@ void GothicAPI::OnWorldLoaded() {
 
     // Hard code the original games sky textures here, since we can't modify the scripts to use the ikarus bindings without
     // installing more content like a .mod file
-    if ( LoadedWorldInfo->WorldName == "WORLD" ) {
+    if ( LoadedWorldInfo->WorldName == "WORLD" ) 
+    {
         GetSky()->SetSkyTexture( ESkyTexture::ST_G1World ); // Sky for gothic 1s world
         RendererState.RendererSettings.SetupG1WorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "COLONY" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_G1World ); // Sky for gothic 2s oldworld & dragonisland
+    } 
+    else if ( LoadedWorldInfo->WorldName == "COLONY" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_G1World ); // Sky for custom G1 world
         RendererState.RendererSettings.SetupG1WorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "OLDWORLD" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_OldWorld ); // Sky for gothic 2s oldworld & dragonisland
+    } 
+    else if ( LoadedWorldInfo->WorldName == "OLDWORLD" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_OldWorld ); // Sky for gothic 2s oldworld
         RendererState.RendererSettings.SetupOldWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "DRAGONISLAND" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_DragonIsland ); // Sky for gothic 2s oldworld & dragonisland
+    } 
+    else if ( LoadedWorldInfo->WorldName == "DRAGONISLAND" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_DragonIsland ); // Sky for gothic 2s dragonisland
         RendererState.RendererSettings.SetupOldWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "ADDONWORLD" ) {
+    } 
+    else if ( LoadedWorldInfo->WorldName == "ADDONWORLD" ) 
+    {
         GetSky()->SetSkyTexture( ESkyTexture::ST_AddonWorld ); // Sky for gothic 2s addonworld
         RendererState.RendererSettings.SetupAddonWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "WORLD_INTRO" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "WORLD_INTRO" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_SequelWorld ); // Sky for G2 Reboot's intro world
         RendererState.RendererSettings.SetupRebootNewWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "TYMORIS_CHAPTER1" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "TYMORIS_CHAPTER1" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Sky for G2 Reboot's Tymoris
         RendererState.RendererSettings.SetupRebootNewWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER2" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER2" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Sky for G2 Reboot's Tymoris
         RendererState.RendererSettings.SetupRebootNewWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER3" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER3" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); //Sky for G2 Reboot's Tymoris
         RendererState.RendererSettings.SetupRebootNewWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER4" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER4" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Sky for G2 Reboot's Tymoris
         RendererState.RendererSettings.SetupRebootNewWorldSpecificValues();
-    } else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER5" ) {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "TYOMRIS_CHAPTER5" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_RebootNewWorld ); // Sky for G2 Reboot's Tymoris
         RendererState.RendererSettings.SetupRebootNewWorldSpecificValues();
-    } else {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_AnniversaryNewWorldALT ); // Make newworld default
+    } 
+    else if ( LoadedWorldInfo->WorldName == "ESKALON" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_SequelWorld ); // Sky for Multiplayer World "Eskalon"
+        RendererState.RendererSettings.SetupEskalonSpecificValues();
+    }
+    else if ( LoadedWorldInfo->WorldName == "NORDMAR" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_OldWorld ); // Sky for Multiplayer World of Northmar in "History of Khorinis"
+        RendererState.RendererSettings.SetupNorthmarSpecificValues();
+    }
+    else if ( LoadedWorldInfo->WorldName == "HOK" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_NewWorld ); // Sky for Multiplayer World of NewWorld in "History of Khorinis"
+        RendererState.RendererSettings.SetupNewWorldSpecificValues();
+    }
+    else if ( LoadedWorldInfo->WorldName == "KHORINIS" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_NewWorld ); // Sky for Multiplayer Worlds of Khorinis
+        RendererState.RendererSettings.SetupNewWorldSpecificValues();
+    }
+    else if ( LoadedWorldInfo->WorldName == "MINENTAL" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_G1World ); // Sky for Multiplayer Worlds of the Valley of Mines
+        RendererState.RendererSettings.SetupG1WorldSpecificValues();
+    }
+    else if ( LoadedWorldInfo->WorldName == "ARCHOLOS" ) 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_SequelWorld ); // Sky for Archolos from "Chronicles of Myrtana"
+        RendererState.RendererSettings.SetupEskalonSpecificValues();
+    }
+    else 
+    {
+        GetSky()->SetSkyTexture( ESkyTexture::ST_AnniversaryNewWorldALT ); // Make Anniversary variant default
         RendererState.RendererSettings.SetupAnniversaryNewWorldSpecificValues();
     }
 
