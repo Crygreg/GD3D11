@@ -28,7 +28,8 @@ enum ESkyTexture {
     ST_AnniversaryNewWorld,
     ST_AnniversaryNewWorldALT,
     ST_SequelWorld,
-    ST_DragonIsland
+    ST_DragonIsland,
+    ST_Northmar
 };
 
 class zCTexture;

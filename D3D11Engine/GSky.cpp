@@ -184,7 +184,12 @@ void GSky::SetSkyTexture( ESkyTexture texture ) {
 
     case ESkyTexture::ST_OldWorld:
         XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
-        Atmosphere.WaveLengths = float3( 0.54f, 0.56f, 0.60f );
+        Atmosphere.WaveLengths = float3( 0.57f, 0.57f, 0.57f );
+        break;
+
+    case ESkyTexture::ST_Northmar:
+        XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
+        Atmosphere.WaveLengths = float3( 0.70f, 0.63f, 0.57f );
         break;
 
     case ESkyTexture::ST_G1World:
@@ -194,12 +199,12 @@ void GSky::SetSkyTexture( ESkyTexture texture ) {
 
     case ESkyTexture::ST_AddonWorld:
         XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay.dds" ) );
-        Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.50f );
+        Atmosphere.WaveLengths = float3( 0.57f, 0.57f, 0.50f );
         break;
 
     case ESkyTexture::ST_DragonIsland:
         XLE( CloudTexture->Init( "system\\GD3D11\\Textures\\SkyDay_OW.dds" ) );
-        Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.50f );
+        Atmosphere.WaveLengths = float3( 0.63f, 0.57f, 0.57f );
         break;
     }
 }

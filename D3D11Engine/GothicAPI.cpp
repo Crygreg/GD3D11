@@ -801,7 +801,7 @@ void GothicAPI::OnWorldLoaded() {
     }
     else if ( LoadedWorldInfo->WorldName == "NORDMAR" ) 
     {
-        GetSky()->SetSkyTexture( ESkyTexture::ST_OldWorld ); // Sky for Multiplayer World of Northmar in "History of Khorinis"
+        GetSky()->SetSkyTexture( ESkyTexture::ST_Northmar ); // Sky for Multiplayer World of Northmar in "History of Khorinis"
         RendererState.RendererSettings.SetupNorthmarSpecificValues();
     }
     else if ( LoadedWorldInfo->WorldName == "HOK" ) 

@@ -708,49 +708,49 @@ struct GothicRendererSettings {
 
     void SetupNewWorldSpecificValues() {
         FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0057f;
+        FogHeightFalloff = 0.00057f;
         FogColorMod = float3::FromColor( 157, 180, 247 );
         FogHeight = 450;
     }
 
     void SetupAnniversaryNewWorldSpecificValues() {
         FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0057f;
+        FogHeightFalloff = 0.00057f;
         FogColorMod = float3::FromColor( 247, 180, 157 );
         FogHeight = 400;
     }
 
     void SetupRebootNewWorldSpecificValues() {
         FogGlobalDensity = 0.00004f;
-        FogHeightFalloff = 0.0057f;
+        FogHeightFalloff = 0.00057f;
         FogColorMod = float3::FromColor( 247, 180, 157 );
         FogHeight = 400;
     }
 
     void SetupAddonWorldSpecificValues() {
         FogGlobalDensity = 0.00003f;
-        FogHeightFalloff = 0.0045f;
+        FogHeightFalloff = 0.00045f;
         FogColorMod = float3::FromColor( 255, 255, 255 );
         FogHeight = 700;
     }
 
     void SetupArcholosSpecificValues() {
         FogGlobalDensity = 0.00003f;
-        FogHeightFalloff = 0.0045f;
+        FogHeightFalloff = 0.00045f;
         FogColorMod = float3::FromColor( 255, 255, 255 );
         FogHeight = 700;
     }
 
     void SetupEskalonSpecificValues() {
         FogGlobalDensity = 0.00003f;
-        FogHeightFalloff = 0.0045f;
+        FogHeightFalloff = 0.00045f;
         FogColorMod = float3::FromColor( 255, 180, 157 );
         FogHeight = 750;
     }
 
     void SetupNorthmarSpecificValues() {
         FogGlobalDensity = 0.00007f;
-        FogHeightFalloff = 0.0057f;
+        FogHeightFalloff = 0.00057f;
         FogColorMod = float3::FromColor( 200, 200, 207 );
         FogHeight = 5000;
     }
